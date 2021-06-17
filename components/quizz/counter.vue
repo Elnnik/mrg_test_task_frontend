@@ -50,7 +50,6 @@ export default {
 
         if (distance <= 0) {
           clearInterval(timer)
-          alert('Время вышло')
           return
         }
 

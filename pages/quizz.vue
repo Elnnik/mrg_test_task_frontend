@@ -157,22 +157,18 @@ export default {
 
       if (userAnswers.questions.length === 0) {
         userAnswers.questions.push(newAnswer);
-        console.log('INITIAL PUSH')
       } else {
         for (let i = 0; i < userAnswers.questions.length; i++) {
           let answerObject = userAnswers.questions[i]
           if (answerObject._id === newAnswer._id) {
-            console.log('REPLACE')
             answerObject.answers = newAnswer.answers
             break
           } else if (answerObject !== newAnswer._id && i === userAnswers.questions.length - 1) {
-            console.log('PUSH NEW ANSWER')
             userAnswers.questions.push(newAnswer)
             break
           }
         }
       }
-      console.log(JSON.stringify(userAnswers))
     },
 
     // Get data from child elements block
@@ -195,13 +191,10 @@ export default {
     },
 
     async getMultiSelectDualboxResult(data) {
-      console.log('PARENT SECTION, AFTER EMIT: ', data)
-
       await this.prepareQuizzData(this.userAnswers, data.answerDetails.questionId, data.answerDetails.answerObjectsList)
     },
 
     async sendQuizzData() {
-      console.log(JSON.stringify(this.userAnswers))
       const response = await fetch('http://217.160.214.250:3000/api/v1/quizz/60bf34d20472f3440739b588', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},

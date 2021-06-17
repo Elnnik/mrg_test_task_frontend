@@ -61,7 +61,6 @@ export default {
 
   methods: {
     async submit() {
-      console.log(this.firstName, this.lastName)
       const response = await fetch('http://217.160.214.250:3000/api/v1/authentication/signup', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},

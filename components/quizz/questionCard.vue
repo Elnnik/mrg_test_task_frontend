@@ -1,7 +1,6 @@
 <template>
   <div class="question-card">
     <p>{{questionIndex}}. {{quizzQuestion.question}}</p>
-<!--    <p>{{quizzQuestion._id}}. {{quizzQuestion.question}}</p>-->
 
     <b-form-select
       v-model="selected_answer"
@@ -73,7 +72,6 @@
       </div>
     </div>
 
-<!--    <div class="mt-3">Selected: <strong>{{ selected_answer }}</strong></div>-->
     <hr>
   </div>
 </template>
@@ -115,7 +113,6 @@ export default {
 
   methods: {
     singleSelectResult(answerObject) {
-      console.log('SINGLE SELECT BEFORE EMMIT: ', answerObject)
       let answerObjectsList = []
       answerObjectsList.push(answerObject)
       this.$emit('singleSelectResult', {
@@ -127,7 +124,6 @@ export default {
     },
 
     multipleSelectResult(answerObjectsList) {
-      console.log('MULTIPLE SELECT BEFORE EMMIT: ', answerObjectsList)
       this.$emit('multipleSelectResult', {
         answerDetails: {
           questionId: this.quizzQuestion._id,
@@ -137,7 +133,6 @@ export default {
     },
 
     dragAndDropSelectResult(dragAndDropAnswerObjectsList) {
-      console.log('BEFORE EMMIT: ', dragAndDropAnswerObjectsList)
       this.$emit('dragAndDropSelectResult', {
         answerDetails: {
           questionId: this.quizzQuestion._id,
@@ -147,8 +142,6 @@ export default {
     },
 
     multiSelectDualboxResult(multiSelectDualboxAnswers) {
-      console.log('DUALBOX BEFORE EMIT: ', this.quizzQuestion._id, multiSelectDualboxAnswers)
-
       let answerObjectsList = []
 
       multiSelectDualboxAnswers.forEach(answerId => {
