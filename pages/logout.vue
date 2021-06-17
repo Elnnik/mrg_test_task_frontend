@@ -11,7 +11,7 @@ export default {
   name: "logout",
   methods: {
     async logout() {
-      const response = await fetch('http://localhost:3000/api/v1/authentication/logout', {
+      const response = await fetch('http://217.160.214.250:3000/api/v1/authentication/logout', {
         method: 'POST',
         credentials: 'include'
       })

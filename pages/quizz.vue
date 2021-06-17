@@ -142,7 +142,7 @@ export default {
   methods: {
     // Initial quizz data loading
     async getQuizzData() {
-      const response = await fetch('http://localhost:3000/api/v1/quizz/60bf34d20472f3440739b588', {
+      const response = await fetch('http://217.160.214.250:3000/api/v1/quizz/60bf34d20472f3440739b588', {
         method: 'GET',
         credentials: "include"
       })
@@ -202,7 +202,7 @@ export default {
 
     async sendQuizzData() {
       console.log(JSON.stringify(this.userAnswers))
-      const response = await fetch('http://localhost:3000/api/v1/quizz/60bf34d20472f3440739b588', {
+      const response = await fetch('http://217.160.214.250:3000/api/v1/quizz/60bf34d20472f3440739b588', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(this.userAnswers),

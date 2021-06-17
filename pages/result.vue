@@ -24,7 +24,7 @@ export default {
 
   methods: {
     async getQuizzResult() {
-      const response = await fetch('http://localhost:3000/api/v1/quizz/result', {
+      const response = await fetch('http://217.160.214.250:3000/api/v1/quizz/result', {
         method: 'GET',
         credentials: "include"
       })
