@@ -1,0 +1,25 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "heroku-postbuild": "npm run build",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@braid/vue-formulate": "^2.5.2",
+    "@nuxtjs/axios": "^5.13.6",
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.9.1",
+    "nuxt": "^2.15.3",
+    "vue-cookie": "^1.1.4",
+    "vue-cookies": "^1.7.4",
+    "vue-multiselect-listbox": "0.0.22",
+    "vuedraggable": "^2.24.3"
+  },
+  "devDependencies": {}
+}
